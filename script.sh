@@ -56,7 +56,7 @@ for input in ${target_dir}/*.{mkv,mp4,avi}; do
 	echo "Video $input"
 	input_sub=$(find_by_regex $(basename $input) $subtitles[@])
 	input_audio=$(find_by_regex $(basename $input) $audios[@])	
-	output_mkv=${target_dir}/$(printf "Yuru Camp %02d.mkv" $i)
+	output_mkv="${target_dir}/${input}-out.mkv"
 	output_mkv_tmp="${target_dir}/tmp.mkv"
 	echo "input_mkv: $input_mkv"	
 	echo "output_mkv: $output_mkv"
